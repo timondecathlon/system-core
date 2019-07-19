@@ -10,15 +10,6 @@ $isHttps = !empty($_SERVER['HTTPS']) && 'off' !== strtolower($_SERVER['HTTPS']);
 $hostname = $protocol.'://'.$_SERVER['HTTP_HOST'].'/';
 define('PROJECT_URL',$protocol.'://'.$_SERVER['HTTP_HOST']);
 
-/*
-echo PROJECT_ROOT;
-echo '<br>';
-echo $_SERVER['DOCUMENT_ROOT'];
-echo '<br>';
-echo PROJECT_URL;
-echo '<br>';
-*/
-
 
 define("DB_HOST", 'localhost');
 define("DB_NAME", 'pennylane');
