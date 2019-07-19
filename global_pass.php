@@ -12,9 +12,9 @@ define('PROJECT_URL',$protocol.'://'.$_SERVER['HTTP_HOST']);
 
 
 define("DB_HOST", 'localhost');
-define("DB_NAME", 'database_name');
-define("DB_USER", 'user_name');
-define("DB_PASSWORD", 'user_password');
+define("DB_NAME", 'pennylane');
+define("DB_USER", 'timon');
+define("DB_PASSWORD", '20091993dec');
 
 //на всякий случай оставляем для процедурки
 $pdo = new \PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
