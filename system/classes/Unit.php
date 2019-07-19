@@ -5,7 +5,7 @@ abstract class Unit implements UnitActions
 	/*конструктор, подключающийся к базе данных*/
 	public function __construct(int $id) {
 		$this->id = $id;
-        $this->pdo = \Bitkit\Core\Database\Connect::getInstance()->getConnection();
+        $this->pdo = Connect::getInstance()->getConnection();
 	}
 
     abstract public function setTable();

@@ -5,7 +5,6 @@
  * Date: 29.09.2018
  * Time: 10:17
  */
-namespace Bitkit\Core\Patterns;
 abstract class Singleton
 {
     protected static $instance = NULL; // Единственный экземпляр класса, чтобы не создавать множество подключений
