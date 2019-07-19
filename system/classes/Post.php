@@ -3,13 +3,8 @@ class Post extends Unit
 {
   
 	//метод для прокидывания таблицы в пост + плюс провека а есть ли такая таблица
-    public function getTable($table){
-        $tables = new Table(0);
-        if(in_array($table,$tables->getAllTables(DB_NAME))){
-            $this->table = $table;   
-        }else{    
-			echo 'table doesnt exist lol =)';
-		}
+    public function getTable($table){       
+        $this->table = $table;          
     }  
 
     public function setTable(){

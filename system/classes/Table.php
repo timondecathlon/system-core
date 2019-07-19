@@ -1,19 +1,21 @@
 <?php
 class Table extends Unit{
 
-
-
 	public function setTable(){
         return 'core_tables';
     }
 
+	public function title(){
+        return $this->getField('title');
+    }
+	
+	/*
+	
     public function tableId(){
         return $this->getField('id');
     }
 
-    public function title(){
-        return $this->getField('title');
-    }
+    
 
     
     public function addColumn($name , $type){
@@ -28,6 +30,8 @@ class Table extends Unit{
         $unit = $sql->fetch(PDO::FETCH_LAZY);
         $this->id = $unit->id;
     }
+	
+	*/
 
 
 }

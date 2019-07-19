@@ -93,6 +93,3 @@ class Member extends Unit{
   
 }
 
-
-
-?>

@@ -1,21 +1,24 @@
 <?php
-//ini_set('error_reporting', E_ALL);ini_set('display_errors', 1);ini_set('display_startup_errors', 1);
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/nordic/your_name/global_pass.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/system-core/global_pass.php');
 
-
-$id = $_POST['id'];
+//получаем айди тамблицы куда писать
 $table_id = $_POST['table_id'];
 
+//собираем массивы полей и значение
+$arr_fields =[];
+$arr_values =[];
+foreach($_POST as $key=>$value){
+	if($key != 'table_id'){
+		$arr_fields[] = $key;
+		$arr_values[] = $value;
+	
+	}
+}
 
-//проверяем залогинен ли юзер
-$logedUser = new Member($_COOKIE['member_id']);
-
-//Если юзер валиден
-//if($logedUser->is_valid()){
-		
+	
 	//создаем экземпляр класса для записи/обновления	
-	   $post = new Post($id);
+    $post = new Post(0);
 	
 	//Достаем насзавние таблицы по id
 	$table = new Table($table_id);
@@ -24,10 +27,6 @@ $logedUser = new Member($_COOKIE['member_id']);
     $post->getTable($table->title());
 	
 	//создаем/обновляем
-    $post->create();
+    $post->createLine($arr_fields ,$arr_values);
 
-//}else{
-   // header("Location: ".$_SERVER['HTTP_REFERER']);
-   // echo "F*ck you, hacker=)";
-//}
-
+header("Location: http://sonicspeed.ru/system-core/index.php");
