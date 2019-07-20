@@ -9,7 +9,7 @@ class Table extends Unit{
         return $this->getField('title');
     }
 	
-	/*
+
 	
     public function tableId(){
         return $this->getField('id');
@@ -31,7 +31,7 @@ class Table extends Unit{
         $this->id = $unit->id;
     }
 	
-	*/
+	
 
 
 }
