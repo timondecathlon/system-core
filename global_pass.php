@@ -8,14 +8,14 @@ include_once(PROJECT_ROOT.'/errors.php');
 
 //Формируем URL
 $isHttps = !empty($_SERVER['HTTPS']) && 'off' !== strtolower($_SERVER['HTTPS']);
-($isHttps) ? $protocol = 'https' : $protocol = 'http';
+($isHttps) ? $protocol = 'https' : $protocol = 'http'; 
 $parts = explode($_SERVER['HTTP_HOST'],__DIR__);
 $folder = array_pop($parts);
 define('PROJECT_URL',$protocol.'://'.$_SERVER['HTTP_HOST'].$folder);
 
 //Записываем пассы в константы
 define("DB_HOST", 'localhost');
-define("DB_NAME", 'dev');
+define("DB_NAME", 'sustem_core_shop');
 define("DB_USER", 'sonic');
 define("DB_PASSWORD", '20091993decSonic-tgogogo');
 
