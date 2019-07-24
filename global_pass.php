@@ -16,8 +16,8 @@ define('PROJECT_URL',$protocol.'://'.$_SERVER['HTTP_HOST'].$folder);
 //Записываем пассы в константы
 define("DB_HOST", 'localhost');
 define("DB_NAME", 'sustem_core_shop');
-define("DB_USER", 'sonic');
-define("DB_PASSWORD", '20091993decSonic-tgogogo');
+define("DB_USER", 'user');
+define("DB_PASSWORD", 'password');
 
 //Для процедурки  
 $pdo = new \PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
